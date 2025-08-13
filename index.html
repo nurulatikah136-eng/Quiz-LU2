@@ -384,10 +384,13 @@ const QUESTION_BANK = [
     type:'mcq',
     prompt:'Solve: √(2x + 3) + √(x − 2) = 4',
     options:[
-      {k:'a',t:'x = 83'},{k:'b',t:'x = 4'},{k:'c',t:'x = 3'},{k:'d',t:'x = 2'}
+      {k:'a',t:'x = 83'},
+      {k:'b',t:'x = 4'},
+      {k:'c',t:'x = 3'},
+      {k:'d',t:'x = 2'}
     ],
     correct:'c',
-    solutionSteps:'Isolate and square carefully. Check extraneous roots: valid solution is x=3.'
+    solutionSteps:'Step 1: Isolate one root: √(2x + 3) = 4 − √(x−2). Step 2: Square both sides: 2x+3 = 16 − 8√(x−2) + (x−2). Step 3: Simplify: x − 11 = −8√(x−2) → 8√(x−2) = 11 − x. Step 4: Square again: 64(x−2) = (11−x)² → 64x−128 = x²−22x+121. Step 5: Solve quadratic: x²−86x+249=0 → x=3 or x=83. Step 6: Check extraneous roots: only x=3 satisfies original equation.'
   },
   {
     id:'Q3',
@@ -400,7 +403,7 @@ const QUESTION_BANK = [
       {k:'d',t:'[-2, ∞)'}
     ],
     correct:'b',
-    solutionSteps:'Critical points at x=-2 and x=-1 (excluded). Sign chart → [-2,-1) ∪ (-1,∞).'
+    solutionSteps:'Step 1: Factor numerator: x²+3x+2 = (x+1)(x+2). Step 2: Critical points: x = -2, -1 (x=-1 excluded). Step 3: Use sign chart → [-2,-1) ∪ (-1,∞).'
   },
   {
     id:'Q4',
@@ -413,12 +416,12 @@ const QUESTION_BANK = [
       {k:'d',t:'(-∞, -2/3)'}
     ],
     correct:'b',
-    solutionSteps:'Roots at -5/2 and -2/3. Negative between roots → (-5/2, -2/3).'
+    solutionSteps:'Step 1: Roots: 3x+2=0 → x=−2/3, 2x+5=0 → x=−5/2. Step 2: Parabola opens positive → product negative between roots → (-5/2, -2/3).'
   },
   {
     id:'Q5',
     type:'mcq',
-    prompt:'Solve: ((x + 2)(x - 1))/(x + 1) < 0',
+    prompt:'Solve: ((x + 2)(x − 1))/(x + 1) < 0',
     options:[
       {k:'a',t:'(-∞, -2) ∪ (-1, 1)'},
       {k:'b',t:'(-∞, -1) ∪ (1, ∞)'},
@@ -426,7 +429,7 @@ const QUESTION_BANK = [
       {k:'d',t:'(-∞, 1)'}
     ],
     correct:'a',
-    solutionSteps:'Critical points -2,-1,1. Sign chart → (-∞,-2) ∪ (-1,1).'
+    solutionSteps:'Step 1: Critical points: x=-2,-1,1. Step 2: Sign chart: negative intervals → (-∞,-2) ∪ (-1,1).'
   },
   {
     id:'Q6a',
@@ -439,7 +442,7 @@ const QUESTION_BANK = [
       {k:'d',t:'(1, ∞)'}
     ],
     correct:'b',
-    solutionSteps:'Bring to one side, consider domain x≠1. Solution → (-∞,0) ∪ (1,∞).'
+    solutionSteps:'Step 1: Subtract 1 → (2x−1)/(x−1)−1>0 → (x)/(x−1)>0. Step 2: Critical points: x=0,1 (x=1 excluded). Step 3: Sign chart: positive when x∈(-∞,0)∪(1,∞).'
   },
   {
     id:'Q6b',
@@ -452,7 +455,7 @@ const QUESTION_BANK = [
       {k:'d',t:'[1, 3)'}
     ],
     correct:'b',
-    solutionSteps:'Factor numerator (x−1)(x−2). Consider x=3 excluded. Nonnegative on [1,2] ∪ (3,∞).'
+    solutionSteps:'Step 1: Factor numerator → (x−1)(x−2)/(x−3) ≥ 0. Step 2: Critical points: x=1,2,3 (x=3 excluded). Step 3: Test intervals → positive on [1,2] ∪ (3,∞).'
   },
   {
     id:'Q7',
@@ -465,7 +468,7 @@ const QUESTION_BANK = [
       {k:'d',t:'(-1/9, 13)'}
     ],
     correct:'b',
-    solutionSteps:'Square both sides or compare distances; solution (-∞, -13) ∪ (-1/9, ∞).'
+    solutionSteps:'Step 1: Square both sides or consider cases. Step 2: Solve inequalities → x∈(-∞, -13) ∪ (-1/9, ∞).'
   },
   {
     id:'Q8',
@@ -478,7 +481,7 @@ const QUESTION_BANK = [
       {k:'d',t:'(-∞, -3/2)'}
     ],
     correct:'b',
-    solutionSteps:'Square and simplify: 9x²+24x+16 ≥ x²+4x+4 → 8x²+20x+12 ≥ 0 → intervals yield result.'
+    solutionSteps:'Step 1: Square both sides → 9x²+24x+16 ≥ x²+4x+4 → 8x²+20x+12 ≥ 0. Step 2: Solve quadratic: x≤−3/2 or x≥−1 → (-∞, -3/2] ∪ [-1, ∞).'
   },
   {
     id:'Q9',
@@ -491,7 +494,7 @@ const QUESTION_BANK = [
       {k:'d',t:'(0, ∞)'}
     ],
     correct:'b',
-    solutionSteps:'Casework on x>0 and x<0; exclude x=0. Result (-3/2,0) ∪ (0,∞).'
+    solutionSteps:'Step 1: Consider cases x>0 and x<0. Step 2: Solve inequalities. Step 3: Exclude x=0 → solution: (-3/2,0) ∪ (0,∞).'
   },
   {
     id:'Q10',
@@ -504,10 +507,9 @@ const QUESTION_BANK = [
       {k:'d',t:'x = (3 ± √41)/8'}
     ],
     correct:'c',
-    solutionSteps:'Quadratic formula: x = [3 ± √(9+32)]/(2·2) = (3 ± √41)/4.'
+    solutionSteps:'Step 1: Quadratic formula: x=[3±√(9+32)]/(2*2) → x=(3±√41)/4.'
   }
 ];
-
 /* ====== Runtime quiz state ====== */
 let quiz = {
   student:null,            // {name,matric,klass}
